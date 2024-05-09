@@ -22,11 +22,11 @@ public class DivslyDemo
 	   {
 				
 		 System.setProperty("webdriver.chrome.driver", "C:\\Users\\akmr7\\OneDrive\\Documents\\Selenium\\chromedriver-win32\\chromedriver.exe");
-         WebDriver driver = new ChromeDriver();
+                 WebDriver driver = new ChromeDriver();
         
-         driver.get("https://dev.divsly.com/");
-         driver.manage().window().maximize();
-         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                 driver.get("https://dev.divsly.com/");
+                 driver.manage().window().maximize();
+                 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
        
 		
 		 WebElement Username = driver.findElement(By.xpath("//input[@placeholder='Enter your email']"));
