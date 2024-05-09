@@ -21,11 +21,11 @@ public class MutipleUser
 	{
 		
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\akmr7\\OneDrive\\Documents\\Selenium\\chromedriver-win32\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+                WebDriver driver = new ChromeDriver();
        
-        driver.get("https://dev.divsly.com/");
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                driver.get("https://dev.divsly.com/");
+                driver.manage().window().maximize();
+                driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
       		
 	}
 	
@@ -43,27 +43,28 @@ public class MutipleUser
 		
 		
 	}
-    @DataProvider(name="LoginData")
-	public String [][] getData()
-	{
+        @DataProvider(name="LoginData")
+	  public String [][] getData()
+	  {   
 		
-    	String loginData[][] = {
+    	     String loginData[][] = {
     			                  {"gnaneswarrao15@gmail.com","Anil@123"},
     			                  {"gnaneswarrao13@gmail.com","Anil@123"},
     			                  {"gnaneswarrao15@gmail.com","nani@123"},
     			                  {"gnaneswarrao203@gmail.com","nani@123"}
     	                        
     	                        };
-    	return loginData;
+    	        return loginData;
     	
     	
-	}
+	   }
+        @AfterClass
+          public void tearDoen() 
+	
+         {
+     	       
+		 driver.close();
+         }
 
-    @AfterClass
-    public void tearDoen() 
-    {
-    	driver.close();
-    }
-
-}
+     }
 
